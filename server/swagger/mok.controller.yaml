@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  description: wip  MOK yaml file
+  version: "0.1"
+  title: defaultTitle
+paths:
+  /mok/:
+    post:
+      summary: "Posr request for mok API"
+      description: "The api creates a new model in the db according to the data"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Post data"
+          schema:
+            $ref: "#/definitions/mokData"
+      responses:
+        200:
+          description: "Returns the session object in JWT format"
+          schema:
+            $ref: "#/definitions/mokData"
+
+  /mok/{id}:
+    get:
+      summary: "Mok get request"
+      description: "The api get mok data by id"
+      parameters:
+        - name: "id"
+          in: "path"
+          type: "string"
+          required: true
+          x-example: "5a9d5ac7b3fbe028b5686c16"
+      responses:
+        200:
+          description: "Returns ok on success"
+          schema:
+            $ref: "#/definitions/mokData"
+
+definitions:
+  mokData:
+    properties:
+      name:
+        type: string
+        description: Mok name

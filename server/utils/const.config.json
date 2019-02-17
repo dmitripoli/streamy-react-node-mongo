@@ -1,0 +1,21 @@
+{
+  "response": {
+    "errorMessage": "Error occurred",
+    "successMessage": "Success",
+    "queryStringError": "Error, missing required query string parameters.",
+    "requiredParamsError": "Error, could not handle request please send all required params",
+    "forbiddenMessage": "Error, Access to the resource is forbidden",
+    "notFound": "Error, requested document not found.",
+    "status": {
+      "ok": 200,
+      "created": 201,
+      "badRequest": 400,
+      "forbidden": 403,
+      "notFound": 404,
+      "conflict": 409,
+      "internalServerError": 500,
+      "unauthorized": 401,
+      "unsupportedMediaType": 415
+    }
+  }
+}
